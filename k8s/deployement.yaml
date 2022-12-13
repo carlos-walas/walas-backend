@@ -1,21 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: api-hello-deployment
+  name: walas-deployment
   labels:
-    app: api-hello
+    app: walas
 spec:
-  replicas: 10
+  replicas: 2
   selector:
     matchLabels:
-      app: api-hello
+      app: walas
   template:
     metadata:
       labels:
-        app: api-hello
+        app: walas
     spec:
       containers:
-      - name: api-hello
-        image: walasbackend
+      - name: walas
+        image: gcr.io/walas-370711/walas-backend:latest
         ports:
         - containerPort: 8080

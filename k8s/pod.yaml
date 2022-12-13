@@ -1,12 +1,12 @@
 apiVersion: v1
 kind: Pod
 metadata:
-  name: api-hello-pod
+  name: walas-pod
   labels:
-    app: api-hello
+    app: walas
 spec:
   containers:
-  - name: api-hello
-    image: walasbackend
+  - name: walas
+    image: gcr.io/walas-370711/walas-backend:latest
     ports:
     - containerPort: 8080
