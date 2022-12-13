@@ -6,7 +6,7 @@ on:
 jobs:
   build-push-gcr:
     name: Build and Push to GCP
-    runs-on: ubuntu-18.04
+    runs-on: ubuntu-20.04
     env:
       IMAGE_NAME: walas-backend
       PROJECT_ID: walas-370711
